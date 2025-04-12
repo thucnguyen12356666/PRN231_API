@@ -1,0 +1,15 @@
+C:\Users\THY\source\repos\SP25_NET1720_PRN231_ASM1_SE170295_NguyenMinhThuc\SCBS.Services\bin\Release\net8.0\SCBS.Services.deps.json
+C:\Users\THY\source\repos\SP25_NET1720_PRN231_ASM1_SE170295_NguyenMinhThuc\SCBS.Services\bin\Release\net8.0\SCBS.Services.dll
+C:\Users\THY\source\repos\SP25_NET1720_PRN231_ASM1_SE170295_NguyenMinhThuc\SCBS.Services\bin\Release\net8.0\SCBS.Services.pdb
+C:\Users\THY\source\repos\SP25_NET1720_PRN231_ASM1_SE170295_NguyenMinhThuc\SCBS.Services\bin\Release\net8.0\SCBS.Repositories.dll
+C:\Users\THY\source\repos\SP25_NET1720_PRN231_ASM1_SE170295_NguyenMinhThuc\SCBS.Services\bin\Release\net8.0\SCBS.Repositories.pdb
+C:\Users\THY\source\repos\SP25_NET1720_PRN231_ASM1_SE170295_NguyenMinhThuc\SCBS.Services\obj\Release\net8.0\SCBS.Services.csproj.AssemblyReference.cache
+C:\Users\THY\source\repos\SP25_NET1720_PRN231_ASM1_SE170295_NguyenMinhThuc\SCBS.Services\obj\Release\net8.0\SCBS.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\THY\source\repos\SP25_NET1720_PRN231_ASM1_SE170295_NguyenMinhThuc\SCBS.Services\obj\Release\net8.0\SCBS.Services.AssemblyInfoInputs.cache
+C:\Users\THY\source\repos\SP25_NET1720_PRN231_ASM1_SE170295_NguyenMinhThuc\SCBS.Services\obj\Release\net8.0\SCBS.Services.AssemblyInfo.cs
+C:\Users\THY\source\repos\SP25_NET1720_PRN231_ASM1_SE170295_NguyenMinhThuc\SCBS.Services\obj\Release\net8.0\SCBS.Services.csproj.CoreCompileInputs.cache
+C:\Users\THY\source\repos\SP25_NET1720_PRN231_ASM1_SE170295_NguyenMinhThuc\SCBS.Services\obj\Release\net8.0\SCBS.Ser.27C9699F.Up2Date
+C:\Users\THY\source\repos\SP25_NET1720_PRN231_ASM1_SE170295_NguyenMinhThuc\SCBS.Services\obj\Release\net8.0\SCBS.Services.dll
+C:\Users\THY\source\repos\SP25_NET1720_PRN231_ASM1_SE170295_NguyenMinhThuc\SCBS.Services\obj\Release\net8.0\refint\SCBS.Services.dll
+C:\Users\THY\source\repos\SP25_NET1720_PRN231_ASM1_SE170295_NguyenMinhThuc\SCBS.Services\obj\Release\net8.0\SCBS.Services.pdb
+C:\Users\THY\source\repos\SP25_NET1720_PRN231_ASM1_SE170295_NguyenMinhThuc\SCBS.Services\obj\Release\net8.0\ref\SCBS.Services.dll

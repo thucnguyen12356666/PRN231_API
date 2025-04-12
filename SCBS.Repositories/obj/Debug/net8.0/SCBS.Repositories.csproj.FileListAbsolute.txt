@@ -1,0 +1,14 @@
+C:\Users\THY\source\repos\SP25_NET1720_PRN231_ASM1_SE170295_NguyenMinhThuc\SCBS.Repositories\bin\Debug\net8.0\SCBS.Repositories.deps.json
+C:\Users\THY\source\repos\SP25_NET1720_PRN231_ASM1_SE170295_NguyenMinhThuc\SCBS.Repositories\bin\Debug\net8.0\SCBS.Repositories.runtimeconfig.json
+C:\Users\THY\source\repos\SP25_NET1720_PRN231_ASM1_SE170295_NguyenMinhThuc\SCBS.Repositories\bin\Debug\net8.0\SCBS.Repositories.dll
+C:\Users\THY\source\repos\SP25_NET1720_PRN231_ASM1_SE170295_NguyenMinhThuc\SCBS.Repositories\bin\Debug\net8.0\SCBS.Repositories.pdb
+C:\Users\THY\source\repos\SP25_NET1720_PRN231_ASM1_SE170295_NguyenMinhThuc\SCBS.Repositories\obj\Debug\net8.0\SCBS.Repositories.csproj.AssemblyReference.cache
+C:\Users\THY\source\repos\SP25_NET1720_PRN231_ASM1_SE170295_NguyenMinhThuc\SCBS.Repositories\obj\Debug\net8.0\SCBS.Repositories.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\THY\source\repos\SP25_NET1720_PRN231_ASM1_SE170295_NguyenMinhThuc\SCBS.Repositories\obj\Debug\net8.0\SCBS.Repositories.AssemblyInfoInputs.cache
+C:\Users\THY\source\repos\SP25_NET1720_PRN231_ASM1_SE170295_NguyenMinhThuc\SCBS.Repositories\obj\Debug\net8.0\SCBS.Repositories.AssemblyInfo.cs
+C:\Users\THY\source\repos\SP25_NET1720_PRN231_ASM1_SE170295_NguyenMinhThuc\SCBS.Repositories\obj\Debug\net8.0\SCBS.Repositories.csproj.CoreCompileInputs.cache
+C:\Users\THY\source\repos\SP25_NET1720_PRN231_ASM1_SE170295_NguyenMinhThuc\SCBS.Repositories\obj\Debug\net8.0\SCBS.Repositories.dll
+C:\Users\THY\source\repos\SP25_NET1720_PRN231_ASM1_SE170295_NguyenMinhThuc\SCBS.Repositories\obj\Debug\net8.0\refint\SCBS.Repositories.dll
+C:\Users\THY\source\repos\SP25_NET1720_PRN231_ASM1_SE170295_NguyenMinhThuc\SCBS.Repositories\obj\Debug\net8.0\SCBS.Repositories.pdb
+C:\Users\THY\source\repos\SP25_NET1720_PRN231_ASM1_SE170295_NguyenMinhThuc\SCBS.Repositories\obj\Debug\net8.0\SCBS.Repositories.genruntimeconfig.cache
+C:\Users\THY\source\repos\SP25_NET1720_PRN231_ASM1_SE170295_NguyenMinhThuc\SCBS.Repositories\obj\Debug\net8.0\ref\SCBS.Repositories.dll

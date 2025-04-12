@@ -1,0 +1,11 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "SCBS.APIServices\\SCBS.APIServices.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

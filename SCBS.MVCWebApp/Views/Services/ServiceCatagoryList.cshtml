@@ -1,0 +1,229 @@
+﻿@model IEnumerable<SCBS.Repositories.Models.ServiceCategory>
+
+@{
+    ViewData["Title"] = "ServiceCategoryList";
+}
+
+<h1>Service Category List - jQuery.Ajax Call RESTful API</h1>
+
+<!-- Form thêm mới ServiceCategory -->
+<div>
+    <h3>Add New Service Category</h3>
+    <div>
+        <label>Service ID:</label>
+        <input type="text" id="serviceId" />
+    </div>
+    <div>
+        <label>Category ID:</label>
+        <input type="text" id="categoryId" />
+    </div>
+
+    <div>
+        <label>Category Code:</label>
+        <input type="text" id="categoryCode" />
+    </div>
+    <div>
+        <label>Image URL:</label>
+        <input type="text" id="imageUrl" />
+    </div>
+    <div>
+        <label>Display Order:</label>
+        <input type="number" id="displayOrder" />
+    </div>
+    <div>
+        <label>Created By:</label>
+        <input type="text" id="createdBy" />
+    </div>
+    <div>
+        <label>Is Deleted:</label>
+        <select id="isDeleted">
+            <option value="false">No</option>
+            <option value="true">Yes</option>
+        </select>
+    </div>
+    <button id="updateBtn" onclick="updateServiceCategory()" style="display:none;">Update</button>
+    <button onclick="addServiceCategory()">Add</button>
+</div>
+
+<!-- Danh sách ServiceCategory -->
+<h2>Service Category List</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Category Code</th>
+            <th>Image</th>
+            <th>Display Order</th>
+            <th>Created By</th>
+            <th>Is Deleted</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody id="tblBody">
+    </tbody>
+</table>
+
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            loadData();
+        });
+
+        function loadData() {
+            $.ajax({
+                url: 'https://localhost:7101/api/ServiceCategory',
+                type: "GET",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+                    var html = '';
+                    $.each(result, function (key, item) {
+                        html += '<tr id="row_' + item.id + '">';
+                        html += '<td>' + item.categoryCode + '</td>';
+                        html += '<td><img src="' + item.imageUrl + '" width="50" height="50"/></td>';
+                        html += '<td>' + item.displayOrder + '</td>';
+                        html += '<td>' + (item.createdBy ? item.createdBy : 'N/A') + '</td>';
+                        html += '<td>' + (item.isDeleted ? 'Yes' : 'No') + '</td>';
+                        html += '<td>';
+                        html += '<button onclick="editServiceCategory(\'' + item.id + '\')">Edit</button>';
+                        html += '<button onclick="deleteServiceCategory(\'' + item.id + '\')">Delete</button>';
+                        html += '</td>';
+                        html += '</tr>';
+                    });
+
+                    $('#tblBody').html(html);
+                },
+                error: function (xhr, error) {
+                    console.log("Error: ", xhr.responseText);
+                    alert("Failed to load data. Please check API.");
+                }
+            });
+        }
+
+               function addServiceCategory() {
+            var obj = {
+                serviceId: $('#serviceId').val(), // Thêm ServiceId
+                categoryId: $('#categoryId').val(), // Thêm CategoryId
+                categoryCode: $('#categoryCode').val(),
+                imageUrl: $('#imageUrl').val(),
+                displayOrder: $('#displayOrder').val(),
+                createdBy: $('#createdBy').val(),
+                isDeleted: $('#isDeleted').val() === "true"
+            };
+
+            $.ajax({
+                url: 'https://localhost:7101/api/ServiceCategory',
+                type: "POST",
+                data: JSON.stringify(obj),
+                contentType: "application/json;charset=utf-8",
+                success: function (result) {
+                    alert("Service Category added successfully!");
+                    loadData();
+                    resetForm();
+                },
+                error: function (xhr, error) {
+                    console.log("Error: ", xhr.responseText);
+                    alert("Failed to add new service category.");
+                }
+            });
+        }
+
+
+                       function editServiceCategory(id) {
+            $.ajax({
+                url: 'https://localhost:7101/api/ServiceCategory/' + id,
+                type: "GET",
+                contentType: "application/json;charset=utf-8",
+                success: function (data) {
+                    $('#serviceId').val(data.serviceId);
+                    $('#categoryId').val(data.categoryId);
+                    $('#categoryCode').val(data.categoryCode);
+                    $('#imageUrl').val(data.imageUrl);
+                    $('#displayOrder').val(data.displayOrder);
+                    $('#createdBy').val(data.createdBy);
+                    $('#isDeleted').val(data.isDeleted ? "true" : "false");
+
+                    // Lưu ID vào input để biết đang edit
+                    $('#categoryCode').attr("data-id", id);
+
+                    // Ẩn nút Add, hiển thị nút Update
+                    $('#addBtn').hide();
+                    $('#updateBtn').show();
+                },
+                error: function (xhr, error) {
+                    console.log("Error: ", xhr.responseText);
+                    alert("Failed to fetch service category.");
+                }
+            });
+        }
+
+
+                              function updateServiceCategory() {
+            var id = $('#categoryCode').attr("data-id"); // ID phải là GUID
+            if (!id) {
+                alert("Please select a service category to update!");
+                return;
+            }
+
+            var obj = {
+                id: id,
+                serviceId: $('#serviceId').val(),
+                categoryId: $('#categoryId').val(),
+                categoryCode: $('#categoryCode').val(),
+                imageUrl: $('#imageUrl').val(),
+                displayOrder: $('#displayOrder').val(),
+                createdBy: $('#createdBy').val(),
+                isDeleted: $('#isDeleted').val() === "true"
+            };
+
+            $.ajax({
+                url: 'https://localhost:7101/api/ServiceCategory/' + id,
+                type: "PUT",
+                data: JSON.stringify(obj),
+                contentType: "application/json;charset=utf-8",
+                success: function (result) {
+                    alert("Service Category updated successfully!");
+                    loadData();
+                },
+                error: function (xhr, error) {
+                    console.log("Error: ", xhr.responseText);
+                    alert("Failed to update service category.");
+                }
+            });
+        }
+
+
+                function resetForm() {
+            $('#serviceId').val('');
+            $('#categoryId').val('');
+            $('#categoryCode').val('');
+            $('#imageUrl').val('');
+            $('#displayOrder').val('');
+            $('#createdBy').val('');
+            $('#isDeleted').val('false');
+
+            $('#categoryCode').removeAttr("data-id"); // Xóa ID đang edit
+
+            $('#addBtn').show();
+            $('#updateBtn').hide();
+        }
+
+
+                function deleteServiceCategory(id) {
+            if (!confirm("Are you sure you want to delete this service category?")) return;
+
+            $.ajax({
+                url: 'https://localhost:7101/api/ServiceCategory/' + id,
+                type: "DELETE",
+                success: function (result) {
+                    alert("Service Category deleted successfully!");
+                    loadData();
+                },
+                error: function (xhr, error) {
+                    console.log("Error: ", xhr.responseText);
+                    alert("Failed to delete service category.");
+                }
+            });
+        }
+
+    </script>
+}
